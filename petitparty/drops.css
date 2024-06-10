@@ -1,0 +1,35 @@
+@keyframes clockwize-anim {
+    from {
+        -webkit-transform:rotate(0deg);
+    }
+    25% {
+        transform:rotate(90deg);
+    }
+    50% {
+        transform:rotate(180deg);
+    }
+    75% {
+        transform:rotate(270deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes counterclock-anim {
+    from {
+        -webkit-transform:rotate(360deg);
+    }
+    25% {
+        transform:rotate(270deg);
+    }
+    50% {
+        transform:rotate(180deg);
+    }
+    75% {
+        transform:rotate(90deg);
+    }
+    to {
+        transform:rotate(0deg);
+    }
+}

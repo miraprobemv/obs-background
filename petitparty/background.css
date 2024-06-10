@@ -1,0 +1,81 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    background-size: auto auto;
+    background-image:
+        repeating-linear-gradient(
+            45deg,
+            rgba(203, 233, 255, 1),
+            rgba(203, 233, 255, 1) 6px,
+            rgba(181, 219, 255, 1) 3px,
+            rgba(181, 219, 255, 1) 28px
+        );
+    overflow: hidden;
+}
+
+header {
+    position: absolute;
+    z-index: 10;
+}
+
+footer {
+    position: absolute;
+    top: calc(100% - 100px);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.jagged {
+    background: #FFF;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    filter: drop-shadow(rgba(0, 0, 0, 0.3) 0px 1px 2px);
+}
+
+.jagged:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background:
+        linear-gradient(
+            45deg,
+            transparent 33.333%,
+            #fff 33.333%, #fff 66.667%,
+            transparent 66.667%
+        ),
+        linear-gradient(
+            -45deg,
+            transparent 33.333%,
+            #fff 33.333%, #fff 66.667%,
+            transparent 66.667%
+        );
+    background-size: 60px 120px;
+}
+
+header.jagged:before {
+    top: 50px;
+    transform: scale(1, -1);
+}
+
+footer.jagged:before {
+    top: -30px;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 5;
+}
