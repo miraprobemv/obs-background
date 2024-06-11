@@ -75,7 +75,9 @@ footer.jagged:before {
 
 main {
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 50px * 2);
     position: absolute;
     z-index: 5;
+    margin: 50px 0 50px;
+    top: 0;
 }
